@@ -1,0 +1,11 @@
+# This file ensures that routes are properly handled by Netlify
+# It tells Netlify to return the index.html for all routes, enabling client-side routing
+
+[build]
+  publish = "dist"
+  command = "npm run build"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
